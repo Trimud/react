@@ -59,8 +59,3 @@ img {
     flex-grow: 2;
     padding: 10px 30px;
 }
-#bio .info p:last-child {
-    text-indent: 20px;
-}
-
-

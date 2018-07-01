@@ -1,14 +1,14 @@
 [
     {
         "id":0,
-        "url":"https://i.imgur.com/B31Uwkm.png"
+        "url":"/episodes/0.jpg"
     },
     {
         "id":1,
-        "url":"https://images3.alphacoders.com/625/thumb-1920-625913.jpg"
+        "url":"/episodes/1.jpg"
     },
     {
         "id":2,
-        "url":"http://i.imgur.com/TGVhTlj.jpg"
+        "url":"/episodes/2.jpg"
     }
 ]

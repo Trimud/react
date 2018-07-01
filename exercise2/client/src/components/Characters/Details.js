@@ -1,16 +1,21 @@
-import React from 'react';
+import React, { Component } from 'react';
+import Image from '../Common/Image';
 
-export default class Details extends React.Component {
-    render = () => (
+class Details extends Component {
+
+    render = () => {
+        return (
             <section id="bio">
                 <div className="image">
-                    <img src="" alt="" />
+                    <Image src={this.props.data[0].url} alt={this.props.data[0].name} />
                 </div>
                 <div className="info">
-                    <p>Name: <strong></strong></p>
-                    <p>Bio:</p>
-                    <p></p>
+                    <p>Name: <strong>{this.props.data[0].name}</strong></p>
+                    <p>Bio: {this.props.data[0].bio}</p>
                 </div>
             </section>
         )
+    }
 }
+
+export default Details;

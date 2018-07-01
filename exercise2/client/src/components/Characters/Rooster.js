@@ -1,35 +1,19 @@
-import React from 'react';
-import fetcher from '../../fetcher';
+import React, { Component } from 'react';
+import Image from '../Common/Image';
 
-const ROSTER_URL = '/roster/';
-
-export default class Rooster extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            id: null,
-            name: null,
-            url: null,
-            bio: null
-        }
-        // this.sliderNav = this.sliderNav.bind(this);
-    }
-
-    fetchRoster = id => fetcher.get(ROSTER_URL + id, data => {
-        this.setState(data)
-    });
-
-    componentDidMount = () => {
-        this.fetchRoster(0);
-    }
-
+class Rooster extends Component {
     render = () => {
         return (
             <section id="roster">
-                <div className="roster-image-container">
-                    <img src={this.state.url} alt="roster" />
-                </div>
+                    {this.props.data.map(
+                        (image) =>
+                        <div className="roster-image-container" key={image.id} onClick={() => this.props.handleClick(image.id)}>
+                            <Image src={image.url} alt="roster" />
+                        </div>
+                    )}
             </section>
         )
     }
 }
+
+export default Rooster;
